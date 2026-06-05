@@ -63,8 +63,8 @@
   </circle>
 </svg>
 
-<h1>🎭 Facial Emotion Recognition</h1>
-
+<br/>
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=32&duration=3000&pause=1000&color=00FFE7&center=true&vCenter=true&width=600&lines=Facial+Emotion+Recognition;Real-Time+Webcam+CNN;Inference+%26+Visualization;FER-2013+Model" alt="Facial Emotion Recognition" />
 </div>
 
 ---
