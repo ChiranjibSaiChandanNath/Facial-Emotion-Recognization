@@ -14,6 +14,7 @@ env/
 # Datasets (excludes raw images while preserving directory structure if desired)
 # To preserve the folder but ignore files, use "Data/**" or just ignore "Data/" completely
 Data/
+*.zip
 
 # Model Files (large binary files)
 *.h5
