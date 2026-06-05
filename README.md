@@ -1,9 +1,95 @@
 <div align="center">
-  <img src="header.svg" width="100%" alt="Facial Emotion Recognition Banner" />
-  
-  <br/>
-  
-  <sub><b>Real-time Facial Emotion Recognition system running CNN inference on webcam feed and test images</b></sub>
+
+<!-- Animated Face Scanner SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <defs>
+    <!-- Scanning glow gradient -->
+    <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00ffcc" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00ffcc" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00ffcc" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Radar Rings -->
+  <circle cx="80" cy="80" r="72" fill="none" stroke="#00ffcc" stroke-width="0.5" stroke-opacity="0.15"/>
+  <circle cx="80" cy="80" r="50" fill="none" stroke="#00ffcc" stroke-width="0.5" stroke-opacity="0.15"/>
+
+  <!-- Corner Guides (Camera Bracket) -->
+  <path d="M 25,45 L 25,25 L 45,25" fill="none" stroke="#00ffcc" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 135,45 L 135,25 L 115,25" fill="none" stroke="#00ffcc" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 25,115 L 25,135 L 45,135" fill="none" stroke="#00ffcc" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 135,115 L 135,135 L 115,135" fill="none" stroke="#00ffcc" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Face Wireframe Silhouette -->
+  <!-- Head outline -->
+  <path d="M 50,55 Q 80,42 110,55 Q 115,85 105,108 Q 80,128 55,108 Q 45,85 50,55 Z" 
+        fill="none" stroke="#0080ff" stroke-width="1.2" stroke-opacity="0.5"/>
+  <!-- Eyes -->
+  <circle cx="68" cy="72" r="3" fill="#00ffcc" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="92" cy="72" r="3" fill="#00ffcc" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Nose/mouth path -->
+  <line x1="80" y1="72" x2="80" y2="88" stroke="#0080ff" stroke-width="1" stroke-opacity="0.6"/>
+  <path d="M 70,98 Q 80,108 90,98" fill="none" stroke="#00ffcc" stroke-width="1.5" stroke-linecap="round">
+    <animate attributeName="stroke" values="#00ffcc;#ff3366;#00ffcc" dur="4s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Horizontal Scanning Line -->
+  <g>
+    <rect x="20" y="20" width="120" height="20" fill="url(#scanGrad)"/>
+    <line x1="20" y1="30" x2="140" y2="30" stroke="#00ffcc" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,100; 0,0" dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Blinking Landmark Nodes -->
+  <circle cx="80" cy="50" r="1.5" fill="#ff3366">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="80" r="1.5" fill="#ff3366">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="80" r="1.5" fill="#ff3366">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="80" cy="115" r="1.5" fill="#ff3366">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+
+<h1>🎭 Facial Emotion Recognition</h1>
+
+</div>
+
+---
+
+<div align="center">
+
+<h3><i>Real-Time Deep Learning Emotion Classifier</i></h3>
+
+<!-- Shield Badges -->
+![Python](https://img.shields.io/badge/Python-3.11-00ffe7?style=for-the-badge&logo=python&logoColor=black&labelColor=060f1e)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-ff6f00?style=for-the-badge&logo=tensorflow&logoColor=white&labelColor=060f1e)
+![Keras 3](https://img.shields.io/badge/Keras-3-D00000?style=for-the-badge&logo=keras&logoColor=white&labelColor=060f1e)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.10-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white&labelColor=060f1e)
+![License](https://img.shields.io/badge/License-MIT-f5a623?style=for-the-badge&labelColor=060f1e)
+
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-060f1e?style=for-the-badge&labelColor=333333)
+
+<br/>
+
+**Advanced Convolutional Neural Network (CNN) for real-time facial expression and emotion classification from webcam and static images.**
+
+<br/>
+
+🚀 [Setup Guide](#-step-by-step-setup--workflow-guide) • 🧬 [CNN Architecture](#-model-architecture) • 📈 [Performance](#-performance--tuning) • 🎭 [Emotion Map](#-emotion-classification-mapping)
+
 </div>
 
 ---
