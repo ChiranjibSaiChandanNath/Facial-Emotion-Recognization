@@ -98,8 +98,10 @@
 
 ```
 Facial-Emotion/
-├── run_test.bat                     ← Start webcam testing (shortcut)
-├── run_image_test.bat               ← Start image testing (shortcut)
+├── run_test.bat                     ← Start webcam testing (Windows shortcut)
+├── run_image_test.bat               ← Start image testing (Windows shortcut)
+├── run_test.sh                      ← Start webcam testing (Linux/macOS shortcut)
+├── run_image_test.sh                ← Start image testing (Linux/macOS shortcut)
 ├── requirements.txt                 ← Python dependencies
 ├── .gitignore                       ← Excludes models and large datasets
 ├── main.py                          ← CNN model training and augmentation
@@ -126,16 +128,34 @@ cd Facial-Emotion-Recognization
 
 ### 2 · Create a Virtual Environment
 Initialize a local Python virtual environment to manage dependencies isolated from your system packages:
-```bash
-# Create the virtual environment folder
+
+#### 🪟 Windows
+```powershell
+# Create environment
 python -m venv venv
 
-# Activate the virtual environment:
-# - On Windows (Command Prompt):
+# Activate (Command Prompt)
 venv\Scripts\activate
-# - On Windows (PowerShell):
+
+# Activate (PowerShell)
 venv\Scripts\Activate.ps1
-# - On macOS/Linux:
+```
+
+#### 🍎 macOS
+```bash
+# Create environment
+python3 -m venv venv
+
+# Activate
+source venv/bin/activate
+```
+
+#### 🐧 Linux
+```bash
+# Create environment
+python3 -m venv venv
+
+# Activate
 source venv/bin/activate
 ```
 
@@ -183,27 +203,27 @@ To run inference, you need the trained model weights:
 - **Option A (Pre-trained)**: Download the pre-trained **[model_file.h5 Weights](YOUR_GOOGLE_DRIVE_MODEL_LINK_HERE)** directly and place it in the root folder of the project.
 - **Option B (Train from scratch)**: Run the training step (**Step 5** above) to generate `model_file.h5` yourself.
 
-Once `model_file.h5` is in your root directory, run inference using the following scripts:
+Once `model_file.h5` is in your root directory, run the classification scripts matching your operating system:
 
-#### 📹 Option A: Real-Time Webcam Detection
-Loads `model_file.h5` and checks your webcam feed for faces using `haarcascade_frontalface_default.xml`. It predicts the facial expression in real-time, outlining faces with color-coded bounding boxes.
-- **Run via Command Line**:
-  ```bash
-  python test.py
-  ```
-- **Run via Windows Shortcut**:
-  Double-click `run_test.bat`.
+#### 🪟 Windows
+- **Real-Time Webcam Mode**: Double-click `run_test.bat` (or run `python test.py`).
+- **Static Image Mode**: Double-click `run_image_test.bat` to test on `img2.jpeg` (or run `python testdata.py path_to_image.jpg`).
 
-*Press **Q** on your keyboard to release the camera and exit the webcam interface.*
+#### 🍎 macOS
+First, grant execution permissions to the launcher scripts:
+```bash
+chmod +x run_test.sh run_image_test.sh
+```
+- **Real-Time Webcam Mode**: Run `./run_test.sh` (or run `python3 test.py`).
+- **Static Image Mode**: Run `./run_image_test.sh path_to_image.jpg` (or run `python3 testdata.py path_to_image.jpg`).
 
-#### 🖼️ Option B: Static Image Inference
-Loads `model_file.h5` and performs emotion classification on a specific image.
-- **Run via Command Line**:
-  ```bash
-  python testdata.py path_to_image.jpg
-  ```
-- **Run via Windows Shortcut**:
-  Double-click `run_image_test.bat` (which runs `testdata.py` on the default `img2.jpeg` image).
+#### 🐧 Linux
+First, grant execution permissions to the launcher scripts:
+```bash
+chmod +x run_test.sh run_image_test.sh
+```
+- **Real-Time Webcam Mode**: Run `./run_test.sh` (or run `python3 test.py`).
+- **Static Image Mode**: Run `./run_image_test.sh path_to_image.jpg` (or run `python3 testdata.py path_to_image.jpg`).
 
 ---
 
