@@ -110,8 +110,8 @@ Follow these steps to configure your environment, train the CNN model, and run e
 ### 1 · Clone the Repository
 Clone this repository to your local machine and navigate into the project root:
 ```bash
-git clone https://github.com/yourusername/Facial-Emotion.git
-cd Facial-Emotion
+git clone https://github.com/ChiranjibSaiChandanNath/Facial-Emotion-Recognization.git
+cd Facial-Emotion-Recognization
 ```
 
 ### 2 · Create a Virtual Environment
@@ -136,7 +136,10 @@ pip install -r requirements.txt
 ```
 
 ### 4 · Prepare the Dataset Structure
-The dataset must be placed in a directory named `Data/` at the root of the project. Organize your training and testing images as follows:
+The dataset must be placed in a directory named `Data/` at the root of the project. 
+
+> [!TIP]
+> You can download the prepared dataset directly from **[Google Drive Dataset Link](https://drive.google.com/file/d/1oV8grnQY5m_slj_VybKI_SAdzHZLZsYS/view?usp=sharing)**. Once downloaded, extract and organize your training and testing images as follows:
 ```
 Data/
 ├── train/
@@ -166,7 +169,11 @@ python main.py
 5. Saves the final trained model weights as `model_file.h5` in the root folder.
 
 ### 6 · Run Facial Emotion Inference
-Once the model is trained and `model_file.h5` is created in your root directory, you can load it to run inference using the following scripts:
+To run inference, you need the trained model weights:
+- **Option A (Pre-trained)**: Download the pre-trained **[model_file.h5 Weights](YOUR_GOOGLE_DRIVE_MODEL_LINK_HERE)** directly and place it in the root folder of the project.
+- **Option B (Train from scratch)**: Run the training step (**Step 5** above) to generate `model_file.h5` yourself.
+
+Once `model_file.h5` is in your root directory, run inference using the following scripts:
 
 #### 📹 Option A: Real-Time Webcam Detection
 Loads `model_file.h5` and checks your webcam feed for faces using `haarcascade_frontalface_default.xml`. It predicts the facial expression in real-time, outlining faces with color-coded bounding boxes.
