@@ -1,0 +1,21 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Facial Emotion Recognition — Requirements
+#
+# ⚠ IMPORTANT: Python 3.13 is NOT officially supported by TensorFlow.
+#   Recommended Python version: 3.11 (download from python.org)
+#   Current workaround: tensorflow-cpu (latest) works on Python 3.13
+#
+# Install: pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Deep Learning (CPU version — works on Python 3.13)
+tensorflow-cpu
+
+# Computer Vision
+opencv-python==4.10.0.84
+
+# Numerical Computing (already installed)
+numpy>=1.21.2
+
+# Image Processing
+pillow>=10.0.0

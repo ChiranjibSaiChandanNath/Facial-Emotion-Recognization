@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IPynb Checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment folders
+venv/
+.venv/
+env/
+
+# Datasets (excludes raw images while preserving directory structure if desired)
+# To preserve the folder but ignore files, use "Data/**" or just ignore "Data/" completely
+Data/
+
+# Model Files (large binary files)
+*.h5
+
+# Local IDEs / System files
+.vscode/
+.idea/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
